@@ -11,10 +11,11 @@ Compile using `g++ -std=c++20 main.cpp -o main` or equivalent command.
 #### 0. Hello World sample
 
 Concepts:
-- running a simple C++ program
+- running a simple C++ program (seeing errors in compiler and fixing them)
 - `std::cout` to write to console
 
 `Tasks:` 
+- [ ] fix the bug: `message2` should be renamed to `message`
 - [ ] change the value of `i` and see the output. 
 - [ ] decide how should `i` be set: should it be inputted at start, should it be validated that it's in the color list range. Then update the code.
 

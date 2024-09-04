@@ -12,7 +12,8 @@ std::map<std::string, std::string> messageTemplates = {
     {"valid.number.error", "Please enter a valid number or ESC to quit: "},
     {"success.message", "Congratulations! You guessed the correct number."},
     {"try.higher", "The number is higher. Guess again: "},
-    {"try.lower", "The number is lower. Guess again: "}
+    {"try.lower", "The number is lower. Guess again: "},
+    {"negative.nr", "Oops! You guessed a negative number, try again with a positive one."}
 };
 
 bool isNumber(std::string input) {
@@ -58,6 +59,9 @@ int main() {
         // check if the input is a number
         if (!isNumber(input)) {
             std::cout << messageTemplates["valid.number.error"];
+
+            else ((input)<0)
+                std::cout << messageTemplates["negative.nr"];
             continue;
         }
 

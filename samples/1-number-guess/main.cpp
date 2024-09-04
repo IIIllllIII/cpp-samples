@@ -2,6 +2,7 @@
 #include <iostream>
 // include map to create an enumeration-like structure that keeps message templates
 #include <map>
+using namespace std;
 
 // create a map of string templates named messages
 std::map<std::string, std::string> messageTemplates = {
@@ -12,6 +13,7 @@ std::map<std::string, std::string> messageTemplates = {
     {"success.message", "Congratulations! You guessed the correct number."},
     {"try.higher", "The number is higher. Guess again: "},
     {"try.lower", "The number is lower. Guess again: "}
+{"negative.nr", "Your number is negative! Try a positive one: "}
 };
 
 bool isNumber(std::string input) {
@@ -57,6 +59,8 @@ int main() {
         // check if the input is a number
         if (!isNumber(input)) {
             std::cout << messageTemplates["valid.number.error"];
+            if ((input)<0)
+                cout << messageTemplate["negative.nr"]
             continue;
         }
 

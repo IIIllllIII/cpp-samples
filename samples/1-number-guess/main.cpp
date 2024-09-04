@@ -2,12 +2,13 @@
 #include <iostream>
 // include map to create an enumeration-like structure that keeps message templates
 #include <map>
+using namespace std;
 
 // create a map of string templates named messages
 std::map<std::string, std::string> messageTemplates = {
     {"exit.instruction", "Enter 'ESC' to quit the program."},
     {"guess.instruction", "Guess a number between 1 and 100."},
-    {"tried.times", "Your try count is: "},
+    {"tried.times", "You tried {} times."},
     {"valid.number.error", "Please enter a valid number or ESC to quit: "},
     {"success.message", "Congratulations! You guessed the correct number."},
     {"try.higher", "The number is higher. Guess again: "},

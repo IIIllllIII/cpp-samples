@@ -43,10 +43,14 @@ int main() {
     std::cout << messageTemplates["guess.instruction"] << " " << messageTemplates["exit.instruction"];
 
     // loop until the user guesses the correct number
-    while (true) {
+result_found = false  # init
+for current_try_count < limit_try_count:
         std::string input;
         std::cin >> input;
-
+If result_found:
+  Print success
+Else:
+  Print failed to find in limit of tries {
         // if the user presses ESC, exit the program
         if (input == "ESC") {
             std::cout << messageTemplates["tried.times"] << guesses_counter << std::endl;
